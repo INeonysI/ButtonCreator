@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9a825;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 2rem;
+}
+
+span {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  align-items: flex-start;
+
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  border-right: 4px solid #e53935;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.025rem;
+  font-weight: 500;
+}
+
+input[type="color"] {
+  width: 27px;
+  border-width: 0;
+}
+
+/*  */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  background-image: linear-gradient(#ff4500, #ff4500);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #ff4500;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/*  */
+
+input[type="number"] {
+  font-size: 1.25rem;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+}
+
+section {
+  margin-left: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+code {
+  font-size: 1.25rem;
+}
+
+pre {
+  font-family: "Fira Code", monospace;
+
+  background-color: #222;
+  color: #fff;
+
+  position: relative;
+  width: 75ch;
+  padding: 1rem 3rem;
+  aspect-ratio: 1/1;
+
+  overflow: auto;
+}
+
+.copy {
+  width: 30px;
+  height: 40px;
+
+  filter: invert(95%) sepia(15%) saturate(1%) hue-rotate(314deg) brightness(85%)
+    contrast(91%);
+
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+
+  cursor: pointer;
+}
